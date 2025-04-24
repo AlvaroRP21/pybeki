@@ -47,7 +47,7 @@ class Contador:
         self._incrementar_aleatorio = inal
 
 c = Contador(0, 0, )
-c.incrementar = 
+c.incrementar = 4
 c.decrementar = 
 c.mostrar = 
 c.incrementar_aleatorio = 
