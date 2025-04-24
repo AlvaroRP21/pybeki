@@ -3,51 +3,85 @@
 # Tendra un metodo llamado decrementar que restara 1 a valor
 # Tendra un metodo llamado mostrar que mostrara un mensaje de cuanto es nuestro valor
 # Tendra un metodo llamado incrementar_aleatorio que sumara un numero aleatorio entre 1 y 6 a valor
+from random import *
 
 
 class Contador:
-    def __init__(self, incrementar, decrementar, mostrar, incrementar_aleatorio):
-        self._incrementar = incrementar
-        self._decrementar = decrementar
-        self._mostrar = mostrar
-        self._incrementar_aleatorio = incrementar_aleatorio
+
+    valor: int
+
+    def __init__(self, valor_de_inicio):
+        self.valor = valor_de_inicio
         
+    def mostrar(self) -> None:
+        print(f"Mi contador vale: {self.valor}")
 
-    @property
-    def incrementar(self):
-        return self._incrementar
-    
-    @property
-    def decrementar(self):
-        return self._decrementar
-    
-    @property
-    def mostrar(self):
-        return self._mostrar
-    
-    @property
+    def incrementar(self, incremento):
+        self.valor += incremento
+
+    def calculo(self, calc, simbolo):
+        if simbolo == "+":
+            self.valor += calc
+
+        elif simbolo == "-":
+            self.valor -= calc
+        
+        elif simbolo == "*":
+            self.valor *= calc
+
+        elif simbolo == "/":
+            self.valor /= calc
+
     def incrementar_aleatorio(self):
-        return self._incrementar_aleatorio
-    
 
-    @incrementar.setter
-    def incrementar(self, incre):
-        self._incrementar = incre
+        numero_aleatorio = (randint(1, 6))
+        self.valor += numero_aleatorio
 
-    @decrementar.setter
-    def decrementar(self, decre):
-        self._decrementar = decre
 
-    @mostrar.setter
-    def mostrar(self, mos):
-        self._mostrar = mos
+# mi_contador = Contador(valor_de_inicio=0)
 
-    @incrementar_aleatorio.setter
-    def incrementar_aleatorio(self, inal):
-        self._incrementar_aleatorio = inal
+# mi_contador.mostrar()
 
-c = Contador(0, 0, )
-c.incrementar = 4
-c.decrementar = 
-c.mostrar = 
-c.incrementar_aleatorio = 
+# mi_contador.incrementar_aleatorio()
+
+# mi_contador.mostrar()
+
+# mi_contador.incrementar_aleatorio()
+
+# mi_contador.mostrar()
+
+# Incrementar el valor
+# mi_contador.incrementar(incremento=5)
+# mi_contador.mostrar()
+# mi_contador.incrementar(incremento=2)
+# mi_contador.calculo(calc=2, simbolo= "*")
+# mi_contador.mostrar()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# mi_contador_2 = Contador(valor_de_inicio=10)
+# c.incrementar = + 1
+# c.decrementar = -1
+# c.mostrar = 0
+# c.incrementar_aleatorio = randint(1, 6)
+
+# print()
+# print(c.incrementar_aleatorio)
